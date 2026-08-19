@@ -15,10 +15,10 @@ El programa debe
 5.-Cerrar el archivo utilizando close().
 """
 from Class.ExtractorDispositivos import ExtractorDispositivos
+from pathlib import Path
 
 if __name__ == "__main__":
-
-    ruta="."
-
+    BASE_DIR = Path(__file__).resolve().parent
+    ruta = BASE_DIR / "data" / "dispositivos.csv"
     extractor = ExtractorDispositivos(ruta)
     extractor.extractordedispositivos()
